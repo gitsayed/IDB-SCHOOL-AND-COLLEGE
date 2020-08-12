@@ -1,0 +1,53 @@
+
+CREATE DATABASE IF NOT EXISTS test;
+USE test;
+
+DROP TABLE IF EXISTS `test`.`student`;
+create table `test`.`student`( `id` varchar(20) NOT NULL , `name` varchar(20) , `fname` varchar(20) ,
+ `address` varchar(20) , `clas` varchar(20) , PRIMARY KEY (`id`))  ;
+
+
+
+insert into `test`.`student` ( `id`  , `name`  , `fname`  , `address`  , `clas`  ) values ('s111', 'nayem',   'abdullahah', 'Dhaka',     '7') ; 
+insert into `test`.`student` ( `id`  , `name`  , `fname`  , `address`  , `clas`  ) values ('s222', 'BABUL',   'abdullahah', 'Barisal',   '7') ;
+insert into `test`.`student` ( `id`  , `name`  , `fname`  , `address`  , `clas`  ) values ('s333', 'Saimon',  'abdullahah', 'rajshahi',  '7') ;
+insert into `test`.`student` ( `id`  , `name`  , `fname`  , `address`  , `clas`  ) values ('s444', 'Saifull', 'abdullahah', 'Sylhet',    '7') ;
+insert into `test`.`student` ( `id`  , `name`  , `fname`  , `address`  , `clas`  ) values ('s555', 'Hafiz',   'abdullahah', 'Chittagong','7') ;
+insert into `test`.`student` ( `id`  , `name`  , `fname`  , `address`  , `clas`  ) values ('s666', 'Enzam',   'abdullahah', 'Rangpur',   '7') ;
+
+
+
+
+
+DROP TABLE IF EXISTS `test`.`teacher`;
+
+ CREATE TABLE `test`.`teacher` ( `id` VARCHAR(20), `name` VARCHAR(20),
+ `address` VARCHAR(50), `salary` DOUBLE, `age` INT, `gender` VARCHAR(10) ); 
+
+INSERT INTO `test`.`teacher`  ( `id` , `name` , `address` , `salary` , `age` , `gender`  ) values ('t111' , 'Harun ' , 'panchagar'  , 20000.50 ,   35 , 'male'); 
+INSERT INTO `test`.`teacher`  ( `id` , `name` , `address` , `salary` , `age` , `gender`  ) values ('t222' , 'Rashid ', 'Bagherhat'  , 30000    ,   45 , 'male');
+INSERT INTO `test`.`teacher`  ( `id` , `name` , `address` , `salary` , `age` , `gender`  ) values ('t333' , 'Polash ', 'jashore'    , 15000,       29 , 'male');
+INSERT INTO `test`.`teacher`  ( `id` , `name` , `address` , `salary` , `age` , `gender`  ) values ('t444' , 'Mamun ' , 'khulna'     , 25000.00 ,   32 , 'male');
+INSERT INTO `test`.`teacher`  ( `id` , `name` , `address` , `salary` , `age` , `gender`  ) values ('t555' , 'Nihar ' , 'Bhola'      , 40000.50 ,   30 , 'male');
+
+
+
+DROP TABLE IF EXISTS `test`.`fees`;
+CREATE TABLE `test`.`fees` ( `id` VARCHAR(20) NOT NULL, `admfee` DOUBLE, `sportfee` DOUBLE, `examfee` DOUBLE, `exfee` DOUBLE );
+
+
+DROP TABLE IF EXISTS `test`.`result`;
+CREATE TABLE `test`.`result` (
+  `id` varchar(20) NOT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `bangla` double DEFAULT '0',
+  `english` double DEFAULT '0',
+  `science` double DEFAULT '0',
+  `sociology` double DEFAULT '0',
+  `ict` double DEFAULT '0',
+  `physics` double DEFAULT '0',
+  `chemistry` double DEFAULT '0',
+  `biology` double DEFAULT '0',
+  `com` double DEFAULT '0',
+  `math` double DEFAULT '0',
+  PRIMARY KEY (`id`)) 
